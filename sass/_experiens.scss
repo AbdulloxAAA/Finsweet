@@ -1,0 +1,107 @@
+.experience {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  margin-top: 128px;
+
+  &__left {
+    width: 50%;
+    background: url("../images/service/energy.png") center/cover no-repeat;
+    filter: grayscale(100%);
+  }
+
+  &__right {
+    width: 50%;
+    background: #F58A07;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      max-width: 350px;
+    }
+
+    .btn {
+      background: #fff;
+      color: #F58A07;
+      padding: 10px 22px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.3s;
+      border: none;
+
+      &:hover {
+        background: #ffb655;
+        color: white;
+      }
+    }
+  }
+
+  /* ===========================
+        RESPONSIVE
+  ============================ */
+
+  /* ---- 1024px (Planshet) ---- */
+  @media (max-width: 1024px) {
+    height: auto;
+
+    &__right {
+      padding-left: 40px;
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+
+  /* ---- 768px (Kichik planshet / katta telefon) ---- */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+
+    &__left,
+    &__right {
+      width: 100%;
+      height: 300px;
+    }
+
+    &__right {
+      padding: 30px;
+
+      h2 {
+        font-size: 22px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  /* ---- 576px (Telefonlar) ---- */
+  @media (max-width: 576px) {
+    margin-top: 60px;
+
+    &__right {
+      padding: 20px;
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .btn {
+        padding: 8px 18px;
+        font-size: 13px;
+      }
+    }
+
+    &__left {
+      height: 220px;
+    }
+  }
+}

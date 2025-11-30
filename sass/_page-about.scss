@@ -1,0 +1,62 @@
+.xsec-omega {
+display: flex;
+justify-content: space-between;
+padding: 80px;
+max-width: 1200px;
+margin: auto;
+
+
+.xblock-alpha {
+width: 40%;
+
+
+h2 {
+font-size: 28px;
+font-weight: 700;
+margin-bottom: 20px;
+}
+
+
+p {
+color: #555;
+line-height: 1.6;
+}
+}
+
+
+.xblock-beta {
+width: 55%;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+
+
+.xunit-kappa {
+h3 {
+font-size: 32px;
+color: #ff8c00;
+display: inline-block;
+margin: 0;
+}
+
+
+span {
+color: #ff8c00;
+font-size: 32px;
+font-weight: bold;
+}
+
+
+p {
+font-weight: 600;
+margin: 10px 0 5px 0;
+}
+
+
+small {
+color: #666;
+line-height: 1.4;
+}
+}
+}
+}

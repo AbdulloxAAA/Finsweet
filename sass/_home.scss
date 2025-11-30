@@ -1,0 +1,224 @@
+.hero {
+  background: #dce8f5;
+  padding-top: 80px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* LEFT SIDE */
+  &__content {
+    max-width: 480px;
+
+    h1 {
+      font-size: 52px;
+      font-weight: 700;
+      color: #1c2c4c;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #6a6f7a;
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .companies-text {
+      margin-top: 20px;
+      font-size: 17px;
+      color: #4d4d4d;
+    }
+  }
+
+  /* BUTTONS */
+  .hero__buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+
+    .btn {
+      padding: 12px 22px;
+      border-radius: 27px;
+      font-size: 14px;
+      color: #1D3444;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #F58A07;
+        color: white;
+      }
+
+      &.primary {
+        background:#F58A07;
+        color: #fff;
+
+        &:hover {
+          background-color: #f8b869;
+          color: #1D3444;
+        }
+      }
+    }
+  }
+
+  /* LOGOS */
+  .hero__logos {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+    color: #39414980;
+    font-size: 18px;
+    font-weight: 500;
+
+    img {
+      width: 90px;
+      opacity: 0.6;
+    }
+  }
+
+  /* RIGHT IMAGE SECTION */
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+
+    .hero__image {
+      width: 100%;
+      max-width: 780px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 2;margin-bottom: -3px;
+    }
+
+    .shape {
+      position: absolute;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      background: #F58A07;
+      z-index: 3;
+
+      &.shape-1 {
+        width: 145px;
+        height: 313px;
+        opacity: 70%;
+        right: 425px;
+        top: 194px;
+      }
+
+      &.shape-2 {
+        width: 130px;
+        height: 195px;
+        right: 140px;
+        opacity: 100%;
+        bottom: 40px;
+        z-index: 1;
+      }
+    }
+  }
+
+  /* ===================== */
+  /* RESPONSIVE DESIGN     */
+  /* ===================== */
+
+  /* TABLET ≤ 992px */
+  @media(max-width:1200px){
+    .shape{
+     display: none;
+    }
+  }
+  @media (max-width: 992px) {
+    &__container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__content {
+      max-width: 100%;
+
+      h1 {
+        font-size: 42px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .hero__buttons {
+      justify-content: center;
+    }
+
+    .hero__logos {
+      justify-content: center;
+
+      img {
+        width: 75px;
+      }
+    }
+
+    &__image-wrapper {
+      .shape-1,
+      .shape-2 {
+        display: none; /* Tabletlarda shakllar to‘qnashmaydi */
+      }
+    }
+  }
+
+  /* MOBILE ≤ 576px */
+  @media (max-width: 576px) {
+    padding-top: 50px;
+
+    &__content h1 {
+      font-size: 32px;
+    }
+
+    &__content p {
+      font-size: 15px;
+    }
+
+    .hero__buttons {
+      flex-direction: column;
+      align-items: center;
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .hero__logos {
+      flex-wrap: wrap;
+      gap: 15px;
+
+      img {
+        width: 60px;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .hero__container {
+    flex-direction: column-reverse; /* Rasm tepaga, matn pastga */
+    text-align: center;
+  }
+
+  .hero__image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero__image-wrapper .hero__image {
+    width: 100%;
+    max-width: 600px;
+    transform: translateY(-20px); /* biroz tepaga chiqarish (ixtiyoriy) */
+  }
+
+  .hero__content {
+    margin-top: 20px;
+  }
+}
