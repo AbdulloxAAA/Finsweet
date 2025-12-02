@@ -1,0 +1,381 @@
+.jobing-card {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #223;
+
+  &__title {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 64px;
+    color: #1D3444;
+  }
+}
+
+.job-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 250px;
+  margin-bottom: 64px;
+
+  &__block { flex: 1; }
+
+  &__heading {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  &__text {
+    color: #5B5B5B;
+    width: 640px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.45;max-width: 100%;
+  }
+}
+
+/* Tabs container: blue rounded box */
+.job-tabs {
+  background: #C1E4FF4D;        // soft light-blue like image
+  padding: 68px;
+  margin-bottom: 210px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(15, 30, 50, 0.04);
+height: 441px;max-width: 100%;
+  &__inner {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 170px;       
+    padding-right: 92px;
+  }
+
+  .job-tab {
+    appearance: none;
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 8px 6px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #3b4752;
+    cursor: pointer;
+    position: relative;
+    &:hover {background: #f1f7ff;  }
+    &.is-active {
+      color: #f57c00;
+      background: #f1f7ff;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -24px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 28px;
+        
+        border-radius: 3px;
+      }
+    }
+  }
+
+  /* RIGHT content panel */
+  &__panel {
+    flex: 1;max-width: 100%;
+    padding: 12px 18px;
+  background: #f1f7ff; 
+    border-radius: 10px;
+    min-height: 140px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+  }
+
+  .job-pane {
+    display: none;
+    color: #5B5B5B;
+      width: 750px;
+    line-height: 28px;
+    font-size: 16px;
+font-weight: 500;
+    &.is-active { display: block; }
+
+    p { margin: 0 0 10px 0; }
+  }
+}
+
+/* Responsive: stack nav on top for small screens */
+@media (max-width: 720px) {
+  .job-tabs {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__nav {
+      flex-direction: row;
+      gap: 10px;
+      border-right: none;
+      border-bottom: 1px solid #e4effb;
+      padding-bottom: 12px;
+      overflow-x: auto;
+      min-width: 0;
+    }
+
+    .job-tab {
+      &::before { display: none; }
+    }
+
+    &__panel {
+      padding-top: 16px;
+    }
+  }
+}
+/* 1200px ↓ (Laptop / Medium desktop) */
+@media (max-width: 1200px) {
+  .job-meta {
+    gap: 80px;
+
+    &__text {
+      width: 100%;
+    }
+  }
+
+  .job-tabs {
+    padding: 48px;
+
+    .job-pane {
+      width: 100%;
+    }
+  }
+}
+
+/* 992px ↓ (Tablet horizontal) */
+@media (max-width: 992px) {
+  .job-meta {
+    flex-direction: column;
+    gap: 32px;
+
+    &__block {
+      width: 100%;
+    }
+  }
+
+  .job-tabs {
+    padding: 40px;
+
+    &__inner {
+      gap: 16px;
+    }
+
+    &__nav {
+      min-width: 150px;
+      padding-right: 40px;
+    }
+  }
+}
+
+/* 768px ↓ (Tablet vertical / Large phone) */
+@media (max-width: 768px) {
+  .job-tabs {
+    padding: 28px;
+
+    &__nav {
+      min-width: 0;
+      overflow-x: auto;
+      gap: 8px;
+    }
+
+    .job-tab {
+      font-size: 18px;
+      padding: 6px 4px;
+    }
+
+    &__panel {
+      padding: 14px;
+    }
+
+    .job-pane {
+      width: 100%;
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+}
+
+/* 576px ↓ (Mobile) */
+@media (max-width: 576px) {
+  .jobing-card {
+    &__title {
+      font-size: 36px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+
+  .job-meta {
+    gap: 20px;
+    &__heading { font-size: 20px; }
+    &__text { font-size: 16px; }
+  }
+
+  .job-tabs {
+    padding: 20px;
+
+    &__nav {
+      gap: 6px;
+    }
+
+    .job-tab {
+      font-size: 16px;
+    }
+
+    &__panel {
+      padding: 12px;
+    }
+
+    .job-pane {
+      font-size: 14px;
+    }
+  }
+}
+/* 420px ↓ (Small mobile) */
+@media (max-width: 420px) {
+
+  /* umumiy paddingsni kichraytirish */
+  .job-tabs {
+    padding: 14px;
+    height: auto;       // scrollni yo‘qotish uchun eng muhim joy!
+max-width: 100%;
+    &__inner {
+      gap: 12px;
+    }
+
+    &__nav {
+      gap: 4px;
+      padding-right: 0;
+    }
+  }
+
+  /* tab tugmalari */
+  .job-tabs .job-tab {
+    font-size: 14px;
+    padding: 4px 2px;
+  }
+
+  /* panel optimal */
+  .job-tabs__panel {
+    padding: 10px;max-width: 100%;
+  }
+
+  /* matn kengligini to‘liq moslash */
+  .job-tabs .job-pane {
+    width: 100% !important;
+    font-size: 13.5px;
+    line-height: 22px;
+  }
+
+  /* meta bo‘lim */
+  .job-meta {
+    gap: 14px;
+
+    &__heading {
+      font-size: 18px;
+    }
+    &__text {
+      width: 100%;
+      font-size: 15px;
+    }
+  }
+
+  /* Title */
+  .jobing-card__title {
+    font-size: 30px;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.apply {
+  padding-bottom: 90px;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: 80%;
+    max-width: 900px;
+  }
+
+  &__title {
+    font-size: 48px;
+    color: #0D1317;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__row {
+    display: flex;
+    gap: 20px;
+
+    input {
+      flex: 1;
+    }
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    outline: none;
+    background: #f7f8fc;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.2s;
+
+    &:focus {
+      box-shadow: 0 0 0 2px #ffbb55;
+    }
+  }
+
+  textarea {
+    height: 160px;
+    resize: none;
+  }
+
+  &__btn {
+    width: 100px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 30px;
+    background: #ff9300;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.25s;
+    font-weight: 600;
+
+    &:hover {
+      background: #ff7b00;
+    }
+  }
+
+  &__success {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #22bb33;
+    font-weight: 600;
+  }
+}

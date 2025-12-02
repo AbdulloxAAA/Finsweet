@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../sass/main.css" />
+    <title>Finsweet</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-links container">
+        <div class="logo"><a href="/">{Finsweet</a></div>
+        <!-- DESKTOP LINKS -->
+        <nav class="nav-links desktop">
+          <a href="../pages/about-us.html">About Us</a>
+          <a href="../pages/careers.html">Careers</a>
+          <a href="../pages/sarvices.html">Services</a>
+          <div class="menu-item dropdown">
+            Blog
+            <ul class="dropdown-menu">
+              <li><a href="../pages/blog.html">Blog</a></li>
+              <li><a href="../pages/blog-inner.html">Blog inner</a></li>
+              <li><a href="../pages/careers-2.html">Careers</a></li>
+              <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <a href="../pages/contact-us.html">Contact Us</a>
+        </nav>
+
+        <div class="actions desktop">
+          <button class="clone-btn">Clone project</button>
+          <button id="modeToggle" class="dark-toggle">🌙</button>
+        </div>
+
+        <!-- MOBILE DARK MODE -->
+        <button id="modeToggleMobile" class="dark-toggle mobile">🌙</button>
+
+        <!-- MOBILE HAMBURGER -->
+        <div class="hamburger mobile" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU DROPDOWN -->
+      <nav class="mobile-menu" id="mobileMenu">
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Services</a>
+        <a href="#">Blog</a>
+        <a href="#">Blog inner</a>
+        <a href="#">Careers inner</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Privacy-Policy</a>
+        <button class="clone-btn">Clone project</button>
+      </nav>
+    </header>
+    <main>
+    <section class="jobing-card container">
+  <h2 class="jobing-card__title">Testing Engineer</h2>
+
+  <div class="job-meta">
+    <div class="job-meta__block">
+      <h4 class="job-meta__heading">Job Description</h4>
+      <p class="job-meta__text">
+        Remote, India. 4 to 5 Years Of Experience Department: Website Design                                       <br>
+        5 Positions Available.
+      </p>
+    </div>
+
+    <div class="job-meta__block">
+      <h4 class="job-meta__heading">Salary</h4>
+      <p class="job-meta__text">$30000 Per Annum</p>
+    </div>
+  </div>
+
+  <div class="job-tabs">
+    <div class="job-tabs__inner">
+      <!-- LEFT: Vertical Nav -->
+      <nav class="job-tabs__nav" role="tablist" aria-label="Job tabs">
+        <button class="job-tab is-active" data-target="tab-details" role="tab" aria-selected="true">Details</button>
+        <button class="job-tab" data-target="tab-requirements" role="tab" aria-selected="false">Requirements</button>
+        <button class="job-tab" data-target="tab-responsibilities" role="tab" aria-selected="false">Responsibilities</button>
+      </nav>
+
+      <!-- RIGHT: Content -->
+      <div class="job-tabs__panel">
+        <div class="job-pane is-active" id="tab-details" role="tabpanel">
+   <p>Design & Create highly engaging industry-related content in both photo, gif & video format
+Publish Posts on various social media channels <br>
+Promote content on social networks and monitor engagement (e.g. comments and shares)
+Research industry-related topics <br>
+Editing audio and sound design on projects <br>
+Engage in opportunities to develop original content and concepts for web and mobile <br>
+Create motion graphics and animations using 2D and 3D applications for marketing and promotional
+ usage. <br>
+<br>
+Manage the day-to-day handling of all social media channels such as LinkedIn, Facebook, Twitter,
+ Pinterest, Instagram, Tiktok and YouTube, adapting content to suit different channels</p>
+        </div>
+        <div class="job-pane" id="tab-requirements" role="tabpanel">
+          <p>Strong understanding of design principles and modern UI/UX practices
+Proficiency with industry-standard design tools (Figma, Adobe XD, Photoshop, Illustrator) <br>
+Ability to create clean, responsive, and visually appealing layouts <br>
+Experience in producing consistent design systems and style guides <br>
+Knowledge of typography, spacing, color theory, and component-based design <br>
+Capability to collaborate with developers and provide clear design handoffs <br>
+Attention to detail and ability to work within brand guidelines <br>
+<br>
+Ability to meet deadlines, handle multiple tasks, and adapt to feedback in a fast-paced environment</p>
+
+        </div>
+
+        <div class="job-pane" id="tab-responsibilities" role="tabpanel">
+       <p>Develop and implement high-quality visual designs for web and mobile projects
+Create graphics, layouts, icons, banners, and other visual materials <br>
+Collaborate with marketing, development, and content teams throughout the project lifecycle <br>
+Prepare design assets, prototypes, and presentations for internal and client review <br>
+Ensure all designs follow brand guidelines and maintain visual consistency <br>
+Update and refine existing design materials based on feedback and performance data <br>
+Participate in brainstorming sessions and contribute creative ideas <br>
+<br>
+Maintain organized project files, manage design tasks, and deliver work within agreed timelines</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="apply container">
+  <div class="apply__container">
+    <h2 class="apply__title">Apply Now</h2>
+
+    <form id="applyForm" class="apply__form">
+      <div class="apply__row">
+        <input type="text" id="firstName" placeholder="First Name" />
+        <input type="text" id="lastName" placeholder="Last Name" />
+      </div>
+
+      <div class="apply__row">
+        <input type="email" id="email" placeholder="Email Id" />
+        <input type="text" id="mobile" placeholder="Mobile No" />
+      </div>
+
+      <textarea id="message" placeholder="Why do you think you are a good fit for Ether?"></textarea>
+
+      <button type="submit" class="apply__btn">Submit</button>
+    </form>
+
+    <p class="apply__success" id="successMsg"></p>
+  </div>
+</section>
+
+    </div>
+  </div>
+</section>
+
+        </main>
+    <footer class="site-footer">
+      <div class="footer-wrapper container">
+        <div class="footer-brand">
+          <h3 class="footer-logo">{Finsweet</h3>
+          <h2 class="footer-title">Bespoke software solutions</h2>
+
+          <div class="footer-social">
+            <a href="https://www.facebook.com/"
+              ><i class="fab fa-facebook"
+                ><img src="../images/footer/facebook.png" alt="" /></i
+            ></a>
+            <a href="https://www.youtube.com/"
+              ><i class="fab fa-youtube"
+                ><img src="../images/footer/youtube.png" alt="" /></i
+            ></a>
+            <a href="https://www.instagram.com/_hech_kim__001_"
+              ><i class="fab fa-instagram"
+                ><img src="../images/footer/instagram.png" alt="" /></i
+            ></a>
+            <a href="https://x.com/"
+              ><i class="fab fa-twitter"
+                ><img src="../images/footer/twitter.png" alt="" /></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Services</a>
+          <a href="#">Blog</a>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Connect</h4>
+          <a href="https://finsweet.com/">hi@finsweet.com</a>
+          <a href="https://web.telegram.org/k/">+ (998) 93 - 471 47 01</a>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Join Newsletter</h4>
+          <div class="news-input">
+            <input id="emailInput" type="email" placeholder="Type email here" />
+            <p class="email-msg"></p>
+            <button id="subscribeBtn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom container">
+        <a href="/" class="footer-copy">© All rights reserved – Finsweet</a>
+        <div class="footer-bot">
+          <a href="https://policies.google.com/privacy?hl=en-US"
+            >Privacy Policy</a
+          >
+          <a
+            href="https://www.termsfeed.com/blog/sample-terms-and-conditions-template/"
+            >Terms & Conditions</a
+          >
+        </div>
+      </div>
+
+      <div class="shape shape-left"></div>
+      <div class="shape shape-right"></div>
+    </footer>
+
+    <script src="../js/about.js"></script>
+    <script src="../js/careers.js"></script>
+  </body>
+</html>
