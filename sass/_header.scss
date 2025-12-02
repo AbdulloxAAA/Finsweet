@@ -80,7 +80,14 @@ body {
 }
 
 
+body.dark .citizen-right{
+  background: $bg-dark;
+  color: $text-dark;
 
+  .mobile-menu {
+    background: $bg-dark;
+  }
+}
 
 body.dark {
   background: $bg-dark;
@@ -98,7 +105,7 @@ body.dark {
 .navbar {
   width: 100%;
   padding: 18px 0;
-  position: sticky;
+  position: fixed;
   top: 0;
   background: inherit;
 

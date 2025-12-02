@@ -158,6 +158,7 @@
     padding: 32px;
 
     h3 {
+      padding-top: 5px;
       font-size: 24px;
       font-weight: 600;
       margin-bottom: 16px;
@@ -188,5 +189,5 @@
 }
 
 body, html {
-  overflow-x: hidden;      // xazon scroll yo'q
+  overflow-x: hidden;   
 }

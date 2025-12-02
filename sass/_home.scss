@@ -87,6 +87,7 @@
     width: 100%;
 
     .hero__image {
+      padding-top: 50px;
       width: 100%;
       max-width: 780px;
       border-radius: 10px;
@@ -161,6 +162,9 @@
     }
 
     &__image-wrapper {
+      img{
+        padding-top: 80px;
+      }
       .shape-1,
       .shape-2 {
         display: none; /* Tabletlarda shakllar to‘qnashmaydi */

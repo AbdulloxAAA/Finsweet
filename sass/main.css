@@ -86,6 +86,14 @@ body {
   display: block;
 }
 
+body.dark .citizen-right {
+  background: #062c49;
+  color: #e6e6e6;
+}
+body.dark .citizen-right .mobile-menu {
+  background: #062c49;
+}
+
 body.dark {
   background: #062c49;
   color: #e6e6e6;
@@ -103,7 +111,7 @@ body.dark .mobile-menu {
 .navbar {
   width: 100%;
   padding: 18px 0;
-  position: sticky;
+  position: fixed;
   top: 0;
   background: inherit;
 }
@@ -314,6 +322,7 @@ body.dark .mobile-menu {
   width: 100%;
 }
 .hero__image-wrapper .hero__image {
+  padding-top: 50px;
   width: 100%;
   max-width: 780px;
   border-radius: 10px;
@@ -370,6 +379,9 @@ body.dark .mobile-menu {
   }
   .hero .hero__logos img {
     width: 75px;
+  }
+  .hero__image-wrapper img {
+    padding-top: 80px;
   }
   .hero__image-wrapper .shape-1,
   .hero__image-wrapper .shape-2 {
@@ -484,7 +496,9 @@ body.dark .mobile-menu {
      object-fit: cover;
 }
 .service-card h3 {
-  font-size: 20px;
+  padding-top: 13px;
+  font-size: 24px;
+  font-weight: 500;
   color: #0D1317;
   margin-bottom: 17px;
 }
@@ -2011,7 +2025,7 @@ body:not(.dark) .site-footer {
 }
 
 .intro-section {
-  padding: 60px 0;
+  padding: 140px 0 60px 0;
   font-family: "Inter", sans-serif;
 }
 .intro-section__wrapper {
@@ -2520,6 +2534,7 @@ body:not(.dark) .site-footer {
   padding: 32px;
 }
 .post-card__content h3 {
+  padding-top: 5px;
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 16px;
@@ -2887,35 +2902,35 @@ body, html {
     text-align: center;
   }
 }
-.apply {
+.applys {
   padding-bottom: 90px;
   display: flex;
   justify-content: center;
 }
-.apply__container {
+.applys__container {
   width: 80%;
   max-width: 900px;
 }
-.apply__title {
+.applys__title {
   font-size: 48px;
   color: #0D1317;
   font-weight: 700;
   margin-bottom: 50px;
 }
-.apply__form {
+.applys__form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.apply__row {
+.applys__row {
   display: flex;
   gap: 20px;
 }
-.apply__row input {
+.applys__row input {
   flex: 1;
 }
-.apply input,
-.apply textarea {
+.applys input,
+.applys textarea {
   width: 100%;
   padding: 16px 20px;
   border: none;
@@ -2925,15 +2940,15 @@ body, html {
   font-size: 14px;
   transition: 0.2s;
 }
-.apply input:focus,
-.apply textarea:focus {
+.applys input:focus,
+.applys textarea:focus {
   box-shadow: 0 0 0 2px #ffbb55;
 }
-.apply textarea {
+.applys textarea {
   height: 160px;
   resize: none;
 }
-.apply__btn {
+.applys__btn {
   width: 100px;
   padding: 10px 0;
   border: none;
@@ -2944,10 +2959,10 @@ body, html {
   transition: 0.25s;
   font-weight: 600;
 }
-.apply__btn:hover {
+.applys__btn:hover {
   background: #ff7b00;
 }
-.apply__success {
+.applys__success {
   margin-top: 10px;
   font-size: 16px;
   color: #22bb33;
