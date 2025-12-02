@@ -1,0 +1,192 @@
+.blog-section {
+  background: #d7e6f2;
+  padding: 80px 0;
+
+  .blog-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  .content {
+    max-width: 510px;
+
+    .author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 400;
+        color: #394149;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        margin-left: 24px;
+        color: #394149;
+      }
+    }
+
+    .title {
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 72px;
+      margin: 24px 0;
+      color: #1D3444;
+    }
+
+    .text {
+      color: #5B5B5B;
+      line-height: 1.6;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .read-more {
+      color: #F58A07;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 16px;
+    }
+  }
+
+  .image {
+    img {
+      width: 621px;
+      height: 493px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+  }
+
+  // -----------------------------
+  //       RESPONSIVE
+  // -----------------------------
+  @media (max-width: 900px) {
+    .blog-container {
+      flex-direction: column-reverse;         // Rasm tepaga chiqadi
+      text-align: center;
+      gap: 40px;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .content {
+      max-width: 100%;
+
+      .title {
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      .text {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .content .title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+}
+/////////////////////blog section end///////////////////////
+.posts {
+  padding: 110px 20px;
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 64px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;            // scrollni oldini oladi
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.post-card {
+  background: #EDF7FF;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+  width: 100%;
+  max-width: 400px;          
+  height: auto;             
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__content {
+    padding: 32px;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #0D1317;
+      line-height: 32px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26px;
+      color: #5B5B5B;
+      margin-bottom: 24px;
+    }
+
+    &__link, a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      color: #F58A07;
+    }
+  }
+}
+
+// Qo‘shimcha xavfsizlik (scroll chiqmasligi uchun):
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden;      // xazon scroll yo'q
+}

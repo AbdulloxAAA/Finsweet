@@ -57,30 +57,3 @@ window.addEventListener("scroll", () => {
 backToTopBtn?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-
-/* ============================
-   COUNTER ANIMATION
-============================ */
-
-const counters = document.querySelectorAll(".counter");
-
-counters.forEach((counter) => {
-  counter.innerText = "0";
-
-  const updateCounter = () => {
-    const target = +counter.getAttribute("data-target");
-    const current = +counter.innerText;
-
-    const increment = target / 150;
-
-    if (current < target) {
-      counter.innerText = Math.ceil(current + increment);
-      requestAnimationFrame(updateCounter);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  updateCounter();
-});
-////////////////////////page home/
