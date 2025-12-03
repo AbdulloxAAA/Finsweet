@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../sass/main.css" />
     <title>Finsweet</title>
+      <link rel="icon" href="../images/home/finsweet logo.jpg">
   </head>
   <body>
     <header class="navbar">
@@ -29,7 +30,7 @@
 
         <div class="actions desktop">
           <button class="clone-btn">Clone project</button>
-          <button id="modeToggle" class="dark-toggle">🌙</button>
+          <button id="modeToggle" class="dark-toggle"><img src="../images/home/moon.png" alt=""></button>
         </div>
 
         <!-- MOBILE DARK MODE -->
@@ -56,11 +57,11 @@
     </header>
     <main>
     <section class="jobing-card container">
-  <h2 class="jobing-card__title">Testing Engineer</h2>
+  <h2 class="jobing-card__title dark-title">Testing Engineer</h2>
 
   <div class="job-meta">
     <div class="job-meta__block">
-      <h4 class="job-meta__heading">Job Description</h4>
+      <h4 class="job-meta__heading dark-title">Job Description</h4>
       <p class="job-meta__text">
         Remote, India. 4 to 5 Years Of Experience Department: Website Design                                       <br>
         5 Positions Available.
@@ -126,27 +127,28 @@ Maintain organized project files, manage design tasks, and deliver work within a
     </div>
   </div>
 </section>
+ <button id="backToTop">↑</button>
 <section class="applys container">
-  <div class="apply__container">
-    <h2 class="apply__title">Apply Now</h2>
+  <div class="applys__container">
+    <h2 class="applys__title dark-title">Apply Now</h2>
 
     <form id="applyForm" class="apply__form">
-      <div class="apply__row">
+      <div class="applys__row">
         <input type="text" id="firstName" placeholder="First Name" />
         <input type="text" id="lastName" placeholder="Last Name" />
       </div>
 
-      <div class="apply__row">
+      <div class="applys__row">
         <input type="email" id="email" placeholder="Email Id" />
         <input type="text" id="mobile" placeholder="Mobile No" />
       </div>
 
       <textarea id="message" placeholder="Why do you think you are a good fit for Ether?"></textarea>
 
-      <button type="submit" class="apply__btn">Submit</button>
+      <button type="submit" class="applys__btn">Submit</button>
     </form>
 
-    <p class="apply__success" id="successMsg"></p>
+    <p class="applys__success" id="successMsg"></p>
   </div>
 </section>
 

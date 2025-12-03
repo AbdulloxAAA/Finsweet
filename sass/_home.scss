@@ -85,11 +85,11 @@
   &__image-wrapper {
     position: relative;
     width: 100%;
-
+max-width: 780;
     .hero__image {
       padding-top: 50px;
       width: 100%;
-      max-width: 780px;
+
       border-radius: 10px;
       position: relative;
       z-index: 2;margin-bottom: -3px;
@@ -107,7 +107,7 @@
         height: 313px;
         opacity: 70%;
         right: 425px;
-        top: 194px;
+        bottom: 0;
       }
 
       &.shape-2 {
@@ -127,9 +127,9 @@
 
   /* TABLET ≤ 992px */
   @media(max-width:1200px){
-    .shape{
-     display: none;
-    }
+   .shape{
+    display: none;
+   }
   }
   @media (max-width: 992px) {
     &__container {
@@ -165,13 +165,48 @@
       img{
         padding-top: 80px;
       }
-      .shape-1,
-      .shape-2 {
-        display: none; /* Tabletlarda shakllar to‘qnashmaydi */
+      .shaping{
+        display: flex;
+        align-items: end;
+        gap: -100px;
+      
+      .shape{ display: flex;
+        align-items: end;
       }
-    }
+      .shape-1 {
+margin-bottom: 17px;
+left:200px;
+height: 55%;
+width: 15%;
+      }
+      .shape-2 {
+        width: 15%;
+   margin-bottom: -23px;
+      }}
+    
   }
-
+  }
+@media (max-width: 710px) {
+   .shaping{
+        display: flex;
+        align-items: end;
+        gap: -100px;
+      
+      .shape{ display: flex;
+        align-items: end;
+      }
+      .shape-1 {
+margin-bottom: 17px;
+left:150px;
+height: 55%;
+width: 20%;
+      }
+      .shape-2 {
+        right: 100px;
+        width: 15%;
+   margin-bottom: -23px;
+      }}
+    }
   /* MOBILE ≤ 576px */
   @media (max-width: 576px) {
     padding-top: 50px;
@@ -202,6 +237,26 @@
         width: 60px;
       }
     }
+       .shaping{
+        display: flex;
+        align-items: end;
+        gap: -100px;
+      
+      .shape{ display: flex;
+        align-items: end;
+      }
+      .shape-1 {
+margin-bottom: 17px;
+left:80px;
+height: 55%;
+width: 20%;
+      }
+      .shape-2 {
+        right: 50px;
+        width: 20%;
+        height: 45%;
+   margin-bottom: -23px;
+      }}
   }
 }
 @media (max-width: 992px) {
@@ -226,3 +281,6 @@
     margin-top: 20px;
   }
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////////////////////////////
+/// //////////////////////////////hom///////////2////////////////2222222222222//////////////////////////////

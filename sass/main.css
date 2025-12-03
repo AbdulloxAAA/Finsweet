@@ -86,6 +86,13 @@ body {
   display: block;
 }
 
+body.dark .dark-title {
+  color: #ff8c00;
+}
+body.dark .dark-title .mobile-menu {
+  background-color: #ff8c00;
+}
+
 body.dark .citizen-right {
   background: #062c49;
   color: #e6e6e6;
@@ -104,7 +111,9 @@ body.dark .mobile-menu {
 
 .navbar {
   min-height: 60px;
-  z-index: 5;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 /* NAVBAR */
@@ -113,7 +122,10 @@ body.dark .mobile-menu {
   padding: 18px 0;
   position: fixed;
   top: 0;
-  background: inherit;
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 .navbar .navbar-links {
   display: flex;
@@ -147,7 +159,7 @@ body.dark .mobile-menu {
 }
 
 .clone-btn {
-  background: #ffe8cc;
+  background: #fef4e7;
   border: none;
   font-size: 16px;
   font-weight: 600;
@@ -160,7 +172,7 @@ body.dark .mobile-menu {
 .dark-toggle {
   background: transparent;
   border: 1px solid #ccc;
-  padding: 8px;
+  padding: 7px 8px 7px 8px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -320,11 +332,11 @@ body.dark .mobile-menu {
 .hero__image-wrapper {
   position: relative;
   width: 100%;
+  max-width: 780;
 }
 .hero__image-wrapper .hero__image {
   padding-top: 50px;
   width: 100%;
-  max-width: 780px;
   border-radius: 10px;
   position: relative;
   z-index: 2;
@@ -342,7 +354,7 @@ body.dark .mobile-menu {
   height: 313px;
   opacity: 70%;
   right: 425px;
-  top: 194px;
+  bottom: 0;
 }
 .hero__image-wrapper .shape.shape-2 {
   width: 130px;
@@ -383,9 +395,46 @@ body.dark .mobile-menu {
   .hero__image-wrapper img {
     padding-top: 80px;
   }
-  .hero__image-wrapper .shape-1,
-  .hero__image-wrapper .shape-2 {
-    display: none; /* Tabletlarda shakllar to‘qnashmaydi */
+  .hero__image-wrapper .shaping {
+    display: flex;
+    align-items: end;
+    gap: -100px;
+  }
+  .hero__image-wrapper .shaping .shape {
+    display: flex;
+    align-items: end;
+  }
+  .hero__image-wrapper .shaping .shape-1 {
+    margin-bottom: 17px;
+    left: 200px;
+    height: 55%;
+    width: 15%;
+  }
+  .hero__image-wrapper .shaping .shape-2 {
+    width: 15%;
+    margin-bottom: -23px;
+  }
+}
+@media (max-width: 710px) {
+  .hero .shaping {
+    display: flex;
+    align-items: end;
+    gap: -100px;
+  }
+  .hero .shaping .shape {
+    display: flex;
+    align-items: end;
+  }
+  .hero .shaping .shape-1 {
+    margin-bottom: 17px;
+    left: 150px;
+    height: 55%;
+    width: 20%;
+  }
+  .hero .shaping .shape-2 {
+    right: 100px;
+    width: 15%;
+    margin-bottom: -23px;
   }
 }
 @media (max-width: 576px) {
@@ -412,6 +461,27 @@ body.dark .mobile-menu {
   }
   .hero .hero__logos img {
     width: 60px;
+  }
+  .hero .shaping {
+    display: flex;
+    align-items: end;
+    gap: -100px;
+  }
+  .hero .shaping .shape {
+    display: flex;
+    align-items: end;
+  }
+  .hero .shaping .shape-1 {
+    margin-bottom: 17px;
+    left: 80px;
+    height: 55%;
+    width: 20%;
+  }
+  .hero .shaping .shape-2 {
+    right: 50px;
+    width: 20%;
+    height: 45%;
+    margin-bottom: -23px;
   }
 }
 
@@ -1821,7 +1891,6 @@ body:not(.dark) .site-footer {
   font-size: 48px;
   line-height: 56px;
   font-weight: 700;
-  color: #0D1317;
   margin-bottom: 32px;
   width: 590px;
 }
@@ -2633,6 +2702,7 @@ body, html {
 .jobing-card {
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color: #223;
+  padding-top: 120px;
 }
 .jobing-card__title {
   font-size: 60px;
@@ -2925,6 +2995,7 @@ body, html {
 .applys__row {
   display: flex;
   gap: 20px;
+  margin-bottom: 24px;
 }
 .applys__row input {
   flex: 1;
@@ -2939,6 +3010,7 @@ body, html {
   border-radius: 10px;
   font-size: 14px;
   transition: 0.2s;
+  margin-bottom: 32px;
 }
 .applys input:focus,
 .applys textarea:focus {
@@ -2989,7 +3061,6 @@ body, html {
 .contact-section .left h2 {
   font-size: 48px;
   font-weight: 600;
-  color: #1D3444;
   margin-bottom: 24px;
   line-height: 1.3;
 }
@@ -3042,7 +3113,6 @@ body, html {
   padding-top: 20px;
   font-size: 24px;
   font-weight: 500;
-  color: #0D1317;
   margin-bottom: 16px;
 }
 .contact-section .right .info div p {

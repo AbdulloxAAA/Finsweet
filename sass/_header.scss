@@ -1,7 +1,7 @@
 /* COLORS */
 $bg-light: #ffffff;
-$bg-dark:#062c49;
-
+$bg-dark: #062c49;
+$text-orange: #ff8c00;
 $text-light: #062c49;
 $text-dark: #e6e6e6;
 
@@ -40,9 +40,9 @@ body {
 /* Dropdown menyu */
 .nav-links.desktop a,
 .menu-item {
-  position: relative; 
+  position: relative;
   display: inline-block;
-   color: #394149;
+  color: #394149;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
@@ -78,9 +78,14 @@ body {
 .menu-item.active .dropdown-menu {
   display: block;
 }
+body.dark .dark-title {
+  color: $text-orange;
+  .mobile-menu {
+    background-color: $text-orange;
+  }
+}
 
-
-body.dark .citizen-right{
+body.dark .citizen-right {
   background: $bg-dark;
   color: $text-dark;
 
@@ -99,7 +104,8 @@ body.dark {
 }
 .navbar {
   min-height: 60px;
-  z-index: 5;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 /* NAVBAR */
 .navbar {
@@ -107,7 +113,9 @@ body.dark {
   padding: 18px 0;
   position: fixed;
   top: 0;
-  background: inherit;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 
   .navbar-links {
     display: flex;
@@ -119,7 +127,7 @@ body.dark {
     font-size: 22px;
     font-weight: 700;
     color: #10375c;
-    a{
+    a {
       text-decoration: none;
       color: #10375c;
     }
@@ -144,7 +152,7 @@ body.dark {
 }
 
 .clone-btn {
-  background: #ffe8cc;
+  background: #fef4e7;
   border: none;
   font-size: 16px;
   font-weight: 600;
@@ -157,7 +165,7 @@ body.dark {
 .dark-toggle {
   background: transparent;
   border: 1px solid #ccc;
-  padding: 8px;
+  padding: 7px 8px 7px 8px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -166,13 +174,13 @@ body.dark {
 .mobile {
   display: none;
 }
-.mobile-menu{
-  a{
+.mobile-menu {
+  a {
     text-decoration: none;
     color: #394149;
     font-size: 16px;
     font-weight: 600;
-    &:hover{
+    &:hover {
       color: #f58a07;
       text-decoration: underline;
     }
@@ -211,7 +219,7 @@ body.dark {
   padding: 20px;
   margin: 0;
   background: $bg-light;
-position: absolute;
+  position: absolute;
   transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;

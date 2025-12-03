@@ -24,10 +24,6 @@ window.addEventListener('click', () => {
   dropdown.classList.remove('active');
 });
 
-
-
-
-
 // Hamburger + mobile menu
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
