@@ -2415,6 +2415,7 @@ body:not(.dark) .site-footer {
 .jobs__title {
   font-size: 48px;
   font-weight: 700;
+  padding-left: 20px;
   color: #0D1317;
   margin-bottom: 60px;
 }
